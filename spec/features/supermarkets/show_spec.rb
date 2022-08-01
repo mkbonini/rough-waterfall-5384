@@ -37,12 +37,13 @@ RSpec.describe 'Supermarket Show Page' do
         CustomerItem.create!(customer: customer_2, item: item_3)
         CustomerItem.create!(customer: customer_3, item: item_3)
 
+        visit "/supermarkets/#{supermarket_1.id}"
+
         within "#popular-items" do
             expect(page).to have_content("1. bayblade")
             expect(page).to have_content("2. ferbie")
             expect(page).to have_content("3. pet rock")
             expect(page).to_not have_content("pencil")
         end
-
     end
 end
