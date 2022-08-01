@@ -1,7 +1,7 @@
 require 'rails_helper' 
 
 RSpec.describe 'Customer Show Page' do 
-    it 'displays a custoemrs items' do
+    it 'displays a custoemrs items with supermarket name' do
         supermarket_1 = Supermarket.create!(name: 'Soopers', location: 'Denver')
         # supermarket_2 = Supermarket.create!(name: 'Sprouts', location: 'Fort Collins')
         customer = Customer.create!(name: 'Mike Bonini', supermarket_id: supermarket_1.id)
@@ -14,10 +14,9 @@ RSpec.describe 'Customer Show Page' do
         visit "/customers/#{customer.id}"
 
         within "#item-list" do
-            expect(page).to have_content('pet rock')
-            expect(page).to have_content('ferbie')
+            expect(page).to have_content('Item: pet rock - Supermarket: Soopers')
+            expect(page).to have_content('Item: ferbie - Supermarket: Soopers')
             expect(page).to_not have_content('bayblade')
         end
     end
-
 end
