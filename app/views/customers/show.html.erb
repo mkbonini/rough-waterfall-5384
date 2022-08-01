@@ -2,5 +2,5 @@
 
 <div id='item-list'>
     <% @customer.items.each do |item| %>
-        <p> <%= item.name %> </p>
+        <p> Item: <%= item.name %> - Supermarket: <%= @customer.supermarket.name %> </p>
     <% end %>
