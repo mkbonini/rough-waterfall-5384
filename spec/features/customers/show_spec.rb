@@ -11,7 +11,7 @@ RSpec.describe 'Customer Show Page' do
         CustomerItem.create!(customer: customer, item: item_1)
         CustomerItem.create!(customer: customer, item: item_2)
 
-        visit "/customer/#{customer.id}"
+        visit "/customers/#{customer.id}"
 
         within "#item-list" do
             expect(page).to have_content('pet rock')
