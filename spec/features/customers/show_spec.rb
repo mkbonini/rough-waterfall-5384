@@ -33,7 +33,7 @@ RSpec.describe 'Customer Show Page' do
         visit "/customers/#{customer.id}"
 
         within "#cart-details" do
-            expect(page).to have_content('Total price: 1100')
+            expect(page).to have_content('Total Price: $1100')
         end
     end
 end

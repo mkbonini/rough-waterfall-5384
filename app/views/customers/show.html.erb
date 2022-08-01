@@ -1,6 +1,11 @@
 <h1> Customer: <%= @customer.name %> </h1>
 
+<div id='cart-details'>
+    <p> Total Price: $<%= @customer.total_price %>
+</div>
+
 <div id='item-list'>
     <% @customer.items.each do |item| %>
         <p> Item: <%= item.name %> - Supermarket: <%= @customer.supermarket.name %> </p>
     <% end %>
+</div>
