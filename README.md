@@ -1,5 +1,7 @@
 # Supermarket Sweep
 
+### Completed by: Mike Bonini
+
 Fork this repository and clone your newly created repository. At the end of the challenge, push your code to your repository and DM all of the instructors with the link to your repository.
 
 ## Be sure to read all user stories BEFORE beginning your work
